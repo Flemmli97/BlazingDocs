@@ -1,0 +1,35 @@
+[data-theme='dark'] .hero--primary {
+    --ifm-hero-background-color: #31323f;
+    --ifm-hero-text-color: inherit;
+}
+
+.hero--primary {
+    --ifm-hero-background-color: #dbf0f9;
+    --ifm-hero-text-color: inherit;
+}
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #0cb222;
+    --ifm-color-primary-dark: #14a928;
+    --ifm-color-primary-darker: #1c922b;
+    --ifm-color-primary-darkest: #186419;
+    --ifm-color-primary-light: #339248;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+    --ifm-color-primary: #e37f21;
+    --ifm-color-primary-dark: #d5751b;
+    --ifm-color-primary-darker: #a85b14;
+    --ifm-color-primary-darkest: #934c0a;
+    --ifm-color-primary-light: #ed9e44;
+    --ifm-color-primary-lighter: #f2ab5a;
+    --ifm-color-primary-lightest: #f7b870;
+    --ifm-background-color: #17171a;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}

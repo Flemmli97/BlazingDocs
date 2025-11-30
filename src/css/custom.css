@@ -1,0 +1,15 @@
+.hero-banner-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+.navbar__logo {
+  border-radius: 0%;
+  overflow: hidden;
+}
+
+div:has(> .navbar__search[hidden]) {
+  display: none;
+}

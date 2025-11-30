@@ -1,0 +1,8 @@
+{
+  "simplequestsSidebar": [
+    "Home",
+    "Config",
+    "Commands",
+    { "Quests": ["Category", "Quests", "Entries-Types"] }
+  ]
+}
