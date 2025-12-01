@@ -52,7 +52,7 @@ const projectsData: { [id: string]: ProjectData } = projects.reduce<
         path: `docs/${project.id}`,
         routeBasePath: `${project.id}`,
         sidebarPath: `./sidebars/${project.id}.ts`,
-        editUrl: "https://github.com/Flemmli97/BlazingDocs",
+        editUrl: "https://github.com/Flemmli97/BlazingDocs/blob/main",
         lastVersion: project.versions ? "current" : undefined,
         versions: project.versions,
       } as DocPluginOption,
