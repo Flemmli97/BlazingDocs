@@ -30,7 +30,7 @@ The basic syntax is
 ```
 
 A downloadable example datapack using default values is provided:
-<a href="/data/improvedmobs/Example%20Datapack.zip">Example Datapack</a>
+<a href="/data/improvedmobs/Example%20Datapack.zip" download>Example Datapack</a>
 
 ## Mob specific overrides
 

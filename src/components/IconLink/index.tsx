@@ -3,7 +3,6 @@ import { Icon } from "@iconify/react";
 import styles from "./styles.module.css";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import clsx from "clsx";
 
 type Props = {
   readonly icon: string;

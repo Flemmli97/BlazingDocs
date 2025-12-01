@@ -5,7 +5,38 @@
   width: 100%;
 }
 
+.row {
+  justify-content: center;
+  gap: calc(1 / 12 * 100%);
+}
+
+.feature {
+  color: unset;
+  --ifm-col-width: calc(2 / 12 * 100%);
+}
+
+.feature:hover {
+  text-decoration: none;
+  .featureIcon {
+    background-color: color-mix(in srgb, var(--ifm-color-primary-contrast-foreground) 30%, transparent);
+  }
+}
+
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+.curseforge {
+  color: #df6d44;
+  background-color: color-mix(in srgb, var(--ifm-color-primary-contrast-foreground) 15%, transparent);
+  padding: 8px;
+  border-radius: 30%;
+}
+
+.modrinth {
+  color: #66cc75;
+  background-color: color-mix(in srgb, var(--ifm-color-primary-contrast-foreground) 15%, transparent);
+  padding: 8px;
+  border-radius: 30%;
 }

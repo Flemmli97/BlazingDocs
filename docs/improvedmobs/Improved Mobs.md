@@ -20,6 +20,6 @@ Check out [Features](Features.md) for all features the mod adds.
 
 The mod is highly customizable with extensive comments in the config files. The wiki will not cover those here.
 Some features require you to create a datapack to edit them.
-For that see [Datadriven configs](Datadriven configs.md).
+For that see [Datadriven configs](Datadriven%20configs.md).
 
 The content of this wiki is based on the most recent version of the mod and can differ if you are using older versions!
