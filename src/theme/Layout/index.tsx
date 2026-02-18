@@ -16,7 +16,7 @@ export default function LayoutWrapper(props: Props): ReactNode {
     <>
       <Head>
         <meta
-          property="docsearch:project"
+          name="docsearch:project"
           content={currentPlugin.pluginId}
         />
       </Head>
