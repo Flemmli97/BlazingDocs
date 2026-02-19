@@ -6,7 +6,7 @@ import type {
   VersionOptions,
 } from "@docusaurus/plugin-content-docs";
 import type { NavbarItem } from "@docusaurus/theme-common";
-import type { ThemeConfig as TypeSenseThemeConfig } from "docusaurus-theme-search-typesense";
+import type { PluginOptions as SearchOptions } from "@easyops-cn/docusaurus-search-local";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -110,32 +110,26 @@ const config: Config = {
     ],
   ],
   plugins: [...Object.values(projectsData).map((d) => d.plugin)],
-  themes: ["docusaurus-theme-search-typesense"],
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        docsRouteBasePath: [...projects.map((p) => p.id)],
+        docsDir: [...projects.map((p) => p.id)],
+        docsPluginIdForPreferredVersion: "flan",
+        searchContextByPaths: [
+          ...projects.map((p) => {
+            return { label: p.label, path: p.id };
+          }),
+        ],
+        hideSearchBarWithNoSearchContext: true,
+      } satisfies PluginOptions & SearchOptions,
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
-    typesense: {
-      // Replace this with the name of your index/collection.
-      // It should match the "index_name" entry in the scraper's "config.json" file.
-      typesenseCollectionName: 'docusaurus-2',
-      typesenseServerConfig: {
-        nodes: [
-          {
-            host: 'localhost',
-            port: 8108,
-            protocol: 'http',
-          },
-        ],
-        apiKey: 'xyz',
-      },
-
-      // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
-      typesenseSearchParameters: {},
-
-      // Optional
-      contextualSearch: true,
-      searchPagePath: "search"
-    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -251,7 +245,7 @@ const config: Config = {
       darkTheme: prismThemes.vsDark,
       additionalLanguages: ["groovy", "java", "kotlin", "json", "json5"],
     },
-  } satisfies Preset.ThemeConfig & TypeSenseThemeConfig,
+  } satisfies Preset.ThemeConfig,
 };
 
 export default config;
