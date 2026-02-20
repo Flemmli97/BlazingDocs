@@ -60,7 +60,7 @@ jobs:
           uses: celsiusnarhwal/typesense-scraper@v2
           with:
             api-key: ${{ secrets.TYPESENSE_API_KEY }}
-            host: https://wiki-api.blazing-coop.net/api
+            host: wiki-api.blazing-coop.net/api
             port: 443
             protocol: https
             config: docsearch.config.json
