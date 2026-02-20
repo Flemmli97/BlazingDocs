@@ -47,6 +47,15 @@ jobs:
         - name: Deploy to GitHub Pages
           id: deployment
           uses: actions/deploy-pages@v4
+          
+  scrape:
+      name: Run DocSearch Scraper
+      needs: deploy
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
         - name: Run DocSearch Scraper
           uses: celsiusnarhwal/typesense-scraper@v2
           with:
