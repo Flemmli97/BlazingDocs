@@ -1,0 +1,46 @@
+{
+    "index_name": "blazing_docs",
+    "start_urls": [
+        "https://wiki.blazing-coop.net/"
+    ],
+    "sitemap_urls": [
+        "https://wiki.blazing-coop.net/sitemap.xml"
+    ],
+    "sitemap_alternate_links": true,
+    "selectors": {
+        "lvl0": {
+            "default_value": "Documentation",
+            "global": true,
+            "selector": "(//*[@sidebarid='navMods']/following-sibling::ul[contains(@class,'dropdown__menu')]//a[contains(@class, 'dropdown__link dropdown__link--active')]/text())",
+            "type": "xpath"
+        },
+        "lvl1": "article h1, header h1",
+        "lvl2": "article h2",
+        "lvl3": "article h3",
+        "lvl4": "article h4",
+        "lvl5": "article h5, article td:first-child",
+        "lvl6": "article h6",
+        "text": "article p, article li, article td:last-child"
+    },
+    "strip_chars": " .,;:#",
+    "scrap_start_urls": false,
+    "custom_settings": {
+        "filterableAttributes": [
+            "url",
+            "language",
+            "version",
+            "type",
+            "docusaurus_tag",
+            "project"
+        ],
+        "searchableAttributes": [
+            "hierarchy_lvl0",
+            "hierarchy_lvl1",
+            "hierarchy_lvl2",
+            "hierarchy_lvl3",
+            "hierarchy_lvl4",
+            "hierarchy_lvl5",
+            "content"
+        ]
+    }
+}
