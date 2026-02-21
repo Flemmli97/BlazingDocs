@@ -142,6 +142,35 @@ So if you have a buyValue of 0.5 and you are buying 5 claimblocks which would re
 For selling the final amount is rounded down if its not money.  
 So if you have a sellValue of 0.5 and you are selling 5 claimblocks you would only get 5 * 0.5 = 2.5 -> 2 diamonds back  
 
+### Item Example
+
+Example for a Buy/Sell Handler using items where one claimblock = 1 apple:
+
+```json
+  "buySellHandler": {
+    "buyType": "ITEM",
+    "buyValue": -1.0, // This is ignored
+    "buyItems": [
+      {
+        "amount": 1.0,
+        "predicate": {
+          "items": "minecraft:apple"
+        }
+      }
+    ],
+    "sellType": "ITEM",
+    "sellValue": -1.0, // This is ignored
+    "sellItems": [
+      {
+        "amount": 1.0,
+        "item": {
+          "id": "minecraft:apple"
+        }
+      }
+    ]
+  }
+``` 
+
 ## NBT format:
 
 NBT tags matches the item if the items nbt contain all the key-value pair specified in the config:
