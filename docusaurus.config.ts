@@ -119,16 +119,17 @@ const config: Config = {
       return acc;
     }, {}),
     typesense: {
-      typesenseCollectionName: 'docusaurus-2',
+      typesenseCollectionName: 'blazing-docs',
       typesenseServerConfig: {
         nodes: [
           {
-            host: 'https://api.blazing-coop.net/wiki_api',
+            host: 'api.blazing-coop.net',
             port: 443,
+            path: '/wiki_api',
             protocol: 'https',
           },
         ],
-        apiKey: 'ysmTojuE38cWeQ6vCWKo8nyEB5XK9vNl',
+        apiKey: '2NQ8gbdRhp6UrLPV5xrSZ3gs1Y3IjoDK',
       },
       typesenseSearchParameters: {
         per_page: 50
