@@ -123,7 +123,7 @@ const config: Config = {
       typesenseServerConfig: {
         nodes: [
           {
-            host: 'https://wiki-api.blazing-coop.net/api',
+            host: 'https://api.blazing-coop.net/wiki_api',
             port: 443,
             protocol: 'https',
           },
