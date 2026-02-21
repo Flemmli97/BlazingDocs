@@ -65,5 +65,5 @@ jobs:
               -e TYPESENSE_PORT="443" \
               -e TYPESENSE_PATH=/wiki_api
               -e TYPESENSE_PROTOCOL="https" \
-              -e CONFIG="$(cat ${{ docsearch.config.json }} | jq -r tostring)" \
+              -e CONFIG="$(cat docsearch.config.json | jq -r tostring)" \
               typesense/docsearch-scraper
