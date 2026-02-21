@@ -57,10 +57,13 @@ jobs:
           with:
             fetch-depth: 0
         - name: Run DocSearch Scraper
-          uses: celsiusnarhwal/typesense-scraper@v2
-          with:
-            api-key: ${{ secrets.TYPESENSE_API_KEY }}
-            host: wiki-api.blazing-coop.net/api
-            port: 443
-            protocol: https
-            config: docsearch.config.json
+          shell: bash
+          run: |
+            docker run \
+              -e TYPESENSE_API_KEY=${{ secrets.TYPESENSE_API_KEY }} \
+              -e TYPESENSE_HOST="api.blazing-coop.net" \
+              -e TYPESENSE_PORT="443" \
+              -e TYPESENSE_PATH=/wiki_api
+              -e TYPESENSE_PROTOCOL="https" \
+              -e CONFIG="$(cat ${{ docsearch.config.json }} | jq -r tostring)" \
+              typesense/docsearch-scraper
